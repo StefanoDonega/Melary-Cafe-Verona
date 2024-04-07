@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Open sans', sans-serif;
+}
+
+body {
+    /* height: 100vh; */
+    background-color: whitesmoke;
+    background-image: url(images/istockphoto-1428737062-170667a.webp);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+a:hover {
+    color: orangered;
+}
+
+header {
+    /* position: relative; */
+    padding: 0 2rem;
+    position: sticky;
+    z-index: 1000;
+    /* position: fixed; */
+    top: 0;
+    left: 100%;
+    /* transform: translateX(-50%); */
+    width: 100%;
+    /* max-width: 1200px; */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    color: whitesmoke;
+    padding: 10px 0;
+    z-index: 1000;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+
+
+
+}
+
+.navbar .nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+.navbar .menu-button {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.prenota {
+    background-color: orangered;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.prenota:hover {
+    scale: 1.05;
+    color: whitesmoke;
+}
+
+.prenota:active {
+    scale: 0.95;
+}
+
+/*--------------HAMBURGER MENU-------------------*/
+
+.hamburger-menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamburger-menu.open {
+    height: 200px;
+}
+
+.hamburger-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu .prenota {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+/*--------------FINE HAMBURGER MENU-------------------*/
+
+/*-------------------HERO MAIN------------------------*/
+
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#hero h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.scarica-menu {
+    background-color: orangered;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.scarica-menu:hover {
+    scale: 1.05;
+    color: whitesmoke;
+}
+
+.scarica-menu:active {
+    scale: 0.95;
+}
+
+.transition-text {
+    /* position: absolute; */
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.transition-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*----------------------------CHI SIAMO--------------------------*/
+
+section#chisiamo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14, 10, 10);
+    height: 100vh;
+    padding: 0 8rem;
+    overflow: hidden;
+
+
+}
+
+section#chisiamo h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    /* border: 1px solid red; */
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+}
+
+.testo-chisiamo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    color: whitesmoke;
+    /* padding: 40px; */
+    /* padding-top: 50px; */
+    /* border: 1px solid red; */
+}
+
+.testo-chisiamo p {
+    font-size: 20px;
+}
+
+.testo-chisiamo img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+}
+
+.transition-chisiamo {
+    /* position: absolute; */
+    bottom: 0;
+    opacity: 0;
+    /* Imposta l'opacità a 0 per nascondere il testo inizialmente */
+    transform: translateY(100%);
+    /* Trasla il testo verso il basso di una quantità pari al 100% dell'altezza del suo contenitore */
+    transition: opacity 0.5s, transform 0.5s;
+    /* Applica una transizione di 0.5 secondi sia sull'opacità che sulla trasformazione */
+}
+
+.transition-chisiamo.visible {
+    opacity: 1;
+    /* Imposta l'opacità a 1 per rendere il testo visibile */
+    transform: translateY(0);
+    /* Trasla il testo verso l'alto di una quantità pari al 0% dell'altezza del suo contenitore */
+}
+
+
+/*------------------------------CAROSELLO FOTO-----------------------------------*/
+
+.sezione-carosello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    height: 100vh;
+    /* background-color: whitesmoke; */
+    background-image: url(images/Beige\ Abstract\ Shapes\ upsidedown.png);
+    overflow: hidden;
+    border: none;
+    outline: none;
+}
+
+.sezione-carosello h1 {
+    font-size: 3rem;
+    padding-top: 1rem;
+    /* border: 1px solid red; */
+    color: whitesmoke;
+    /* padding-bottom: 1rem; */
+}
+
+section#carosello {
+
+
+    max-width: 1200px;
+    width: 95%;
+    /* background-color: ; */
+}
+
+.carosello-foto .lista-immagini {
+    display: grid;
+    gap: 40px;
+    font-size: 0;
+    overflow-x: auto;
+    /* scrollbar-width: none; */
+    grid-template-columns: repeat(8, 1fr);
+    /* border: 1px solid red */
+
+}
+
+
+
+.carosello-foto .lista-immagini .img-carosello {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+
+
+/*-----------------------------CONTATTI E MAPS-------------------*/
+
+section#contatti h3 {
+    font-size: 3rem;
+}
+
+.contatti {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    background-image: url(images/Beige\ Abstract\ Shapes\ Desktop\ Wallpaper.png);
+
+    border: none;
+    outline: none;
+}
+
+/* .mappa, .recapiti, .sez-recapiti{
+    border: 1px solid red;
+
+} */
+
+.mappa {
+    width: 65%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.recapiti {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sez-recapiti {
+    height: 100%;
+
+    width: 100%;
+}
+
+.sez-recapiti {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: space-between;
+    padding-top: 40px;
+    align-items: center;
+
+}
+
+.sez-recapiti a {
+    color: black;
+    text-decoration: none;
+    padding: 10%;
+    /* width: 100%;
+    border: 1px solid red; */
+}
+
+.mail-tel,
+.social {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+}

@@ -1,0 +1,87 @@
+@media (max-width: 992px) {
+    .navbar .nav-links,
+    .navbar .prenota {
+        display: none;
+    }
+
+    .navbar .menu-button {
+        display: block;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .testo-chisiamo{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .testo-chisiamo p{
+        font-size: 1rem;
+        padding: 0;
+        margin: 10px;
+    }
+
+    .testo-chisiamo img{
+        width: 200px;
+        margin: 5px;
+    }
+
+    section#chisiamo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+        
+    }
+
+    .contatti{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .framemappa iframe{
+        width: 250px;
+        height: 250px;
+    }
+    .framemappa, .sez-recapiti{
+        height: 300px;
+    }
+    
+    .recapiti{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+        justify-content: space-between;
+        /* padding-top: 40px; */
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 25%;
+        padding-bottom: 60%;
+        
+    }
+    .sez-recapiti a{
+        width: 50%;
+    }
+
+    .mail-tel, .social{
+        width: 100%;
+        
+        
+    }
+
+    section#contatti h3{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hamburger-menu{
+        left: 2rem;
+        width: unset;
+    }
+}
